@@ -39,8 +39,8 @@
         
         UIBezierPath* smoothedPath = [UIBezierPath bezierPathWithArcCenter:arcCenter
                                                                     radius:self.radius
-                                                                startAngle:(CGFloat) (M_PI*3/2)
-                                                                  endAngle:(CGFloat) (M_PI/2+M_PI*5)
+                                                                startAngle:(CGFloat)(0)// (M_PI*3/2)
+                                                                  endAngle:(CGFloat)(M_PI_2 + M_PI*4)// (M_PI/2+M_PI*5)
                                                                  clockwise:YES];
         
         _indefiniteAnimatedLayer = [CAShapeLayer layer];
@@ -49,7 +49,7 @@
         _indefiniteAnimatedLayer.fillColor = [UIColor clearColor].CGColor;
         _indefiniteAnimatedLayer.strokeColor = self.strokeColor.CGColor;
         _indefiniteAnimatedLayer.lineWidth = self.strokeThickness;
-        _indefiniteAnimatedLayer.lineCap = kCALineCapRound;
+        //        _indefiniteAnimatedLayer.lineCap = kCALineCapRound;
         _indefiniteAnimatedLayer.lineJoin = kCALineJoinBevel;
         _indefiniteAnimatedLayer.path = smoothedPath.CGPath;
         
